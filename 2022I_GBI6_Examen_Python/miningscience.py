@@ -3,7 +3,7 @@ import re
 import csv
 
 def download_pubmed(keyword): 
-    """Docstring download_pubmed.
+    """Funcion para descargar la información de los articulos de interes, extraidos de Pubmed
     """
    # Always tell NCBI who you are (edit the e-mail below!)
     Entrez.email = "gualapuro.moises@gmail.com"
@@ -30,7 +30,7 @@ def download_pubmed(keyword):
     return
 
 def map_science(tipo):
-    """funcion para crear el mapeado en base a la base de datos que obtuvimos con anterioridad"""
+    """Funcion para mapear la cantidad de articulos escritos en un determinado lugar, sobre los datos obtenidos en la funcion download_pubmed"""
     #if tipo == "AD":
     with open(tipo) as f:
         my_text = f.read()
